@@ -1,15 +1,22 @@
-import { motion } from 'framer-motion';
-import styles from '../style/Header.module.css';
+import { motion } from "framer-motion";
+import { Group, Button } from "@mantine/core";
+import { Menu } from "lucide-react";
+import styles from "../style/Header.module.css";
 
 export function Header() {
   return (
-    <motion.header 
+    <motion.header
       className={styles.header}
-      initial={{ y: -50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.8 }}
     >
-      Header Content
+      <h2>React Dashboard</h2>
+
+      <Group>
+        <Menu />
+        <Button color="blue">Iniciar Sesión</Button>
+      </Group>
     </motion.header>
   );
 }
